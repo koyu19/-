@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡単なクイズアプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>シンプルなクイズ</h1>
+        <div id="quiz">
+            <h2 id="question">問題文が表示されます</h2>
+            <div id="choices" class="choices-grid">
+                <button class="btn">選択肢 A</button>
+                <button class="btn">選択肢 B</button>
+                <button class="btn">選択肢 C</button>
+                <button class="btn">選択肢 D</button>
+            </div>
+            <p id="feedback"></p>
+            <button id="next-btn" class="next-btn">次の問題</button>
+        </div>
+        <div id="result" class="hidden">
+            <h2>クイズ終了！</h2>
+            <p>あなたの正解数: <span id="score">0</span> / <span id="total-questions">0</span></p>
+            <button id="restart-btn" class="next-btn">もう一度プレイ</button>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
