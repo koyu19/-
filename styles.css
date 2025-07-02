@@ -1,0 +1,109 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+    color: #333;
+}
+
+.quiz-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.choices-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* デフォルトは1列 */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* 画面幅が広い場合は2列にする */
+@media (min-width: 600px) {
+    .choices-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    width: 100%;
+    box-sizing: border-box; /* paddingを含めた幅にする */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn.correct {
+    background-color: #28a745; /* 緑色 */
+}
+
+.btn.incorrect {
+    background-color: #dc3545; /* 赤色 */
+}
+
+#feedback {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    min-height: 1.5em; /* フィードバックが表示されないときの高さ調整 */
+}
+
+.next-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.next-btn:hover {
+    background-color: #5a6268;
+}
+
+.hidden {
+    display: none;
+}
+
+#result p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
